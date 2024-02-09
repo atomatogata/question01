@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.traffic-signal {
+	display: flex;
+	gap: 15px;
+	border: 1px solid #000;
+	width: fit-content;
+	padding: 20px;
+}
+
+.lamp {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: gray;
+	cursor: pointer;
+}
+
+.lamp:nth-of-type(1).active {
+	background-color: red;
+}
+
+.lamp:nth-of-type(2).active {
+	background-color: yellow;
+}
+
+.lamp:nth-of-type(3).active {
+	background-color: green;
+}
