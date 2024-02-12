@@ -1,15 +1,15 @@
 "use strict";
 
 window.onload = function () {
+	const trafficSignal = document.querySelector(".traffic-signal");
 	const lamps = document.querySelectorAll(".lamp");
-	lamps.forEach((lamp) => {
-		lamp.addEventListener("click", function () {
-			lamp.classList.toggle("active");
-			lamps.forEach((l) => {
-				if (l !== lamp) {
-					l.classList.remove("active");
-				}
-			});
-		});
+	let activeLamp = document.querySelector(".active");
+
+	trafficSignal.addEventListener("click", function (e) {
+		if (activeLamp) {
+			activeLamp.classList.remove("active");
+		}
+		e.target.classList.add("active");
+		activeLamp = e.target;
 	});
 };
